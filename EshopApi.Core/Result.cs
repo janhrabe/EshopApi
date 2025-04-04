@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.Design.Serialization;
-
-namespace EshopApi.Core;
+﻿namespace EshopApi.Core;
 
 public class Result<T>
 {
