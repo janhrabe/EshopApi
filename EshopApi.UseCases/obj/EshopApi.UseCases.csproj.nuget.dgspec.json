@@ -4,14 +4,14 @@
     "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj": {}
   },
   "projects": {
-    "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj": {
+    "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj",
-        "projectName": "EshopApi.UseCases",
-        "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj",
+        "projectUniqueName": "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj",
+        "projectName": "EshopApi.Core",
+        "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj",
         "packagesPath": "/Users/janhrabe/.nuget/packages/",
-        "outputPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/",
+        "outputPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/janhrabe/.nuget/NuGet/NuGet.Config"
@@ -44,6 +44,80 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100-preview.6.24328.19/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj",
+        "projectName": "EshopApi.UseCases",
+        "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj",
+        "packagesPath": "/Users/janhrabe/.nuget/packages/",
+        "outputPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/janhrabe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj": {
+                "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
+            "MediatR.Contracts": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
