@@ -1,10 +1,11 @@
 using EshopApi.Core;
 using EshopApi.Core.Interfaces;
 using MediatR;
+using ProductEntity = EshopApi.Core.Entities.Product;
 
 namespace EshopApi.UseCases.Product.Create;
 
-public class CreateProductHandler(IRepository<Core.Entities.Product> repository) : IRequestHandler<CreateProductCommand, Result<Guid>>
+public class CreateProductHandler(IRepository<ProductEntity> repository) : IRequestHandler<CreateProductCommand, Result<Guid>>
 {
     public async Task<Result<Guid>> Handle(CreateProductCommand request, CancellationToken cancellationToken)
     {
@@ -18,7 +19,7 @@ public class CreateProductHandler(IRepository<Core.Entities.Product> repository)
             return Result<Guid>.Failure("ImageUrl is required");
         }
 
-        var product = new Core.Entities.Product
+        var product = new ProductEntity
         {
             Id = Guid.NewGuid(),
             Name = request.Name,
