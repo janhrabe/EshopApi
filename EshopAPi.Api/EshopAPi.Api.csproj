@@ -7,7 +7,19 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="FastEndpoints" Version="5.35.0" />
+        <PackageReference Include="FastEndpoints.Swagger" Version="5.35.0" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-preview.6.24328.4"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EshopApi.Core\EshopApi.Core.csproj" />
+      <ProjectReference Include="..\EshopApi.Infrastructure\EshopApi.Infrastructure.csproj" />
+      <ProjectReference Include="..\EshopApi.UseCases\EshopApi.UseCases.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ProductEndpoints\" />
     </ItemGroup>
 
 </Project>

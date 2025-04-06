@@ -1,0 +1,11 @@
+/Users/janhrabe/Repos/EshopApi/EshopApi.Core/bin/Debug/net9.0/EshopApi.Core.deps.json
+/Users/janhrabe/Repos/EshopApi/EshopApi.Core/bin/Debug/net9.0/EshopApi.Core.dll
+/Users/janhrabe/Repos/EshopApi/EshopApi.Core/bin/Debug/net9.0/EshopApi.Core.pdb
+/Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/Debug/net9.0/EshopApi.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/Debug/net9.0/EshopApi.Core.AssemblyInfoInputs.cache
+/Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/Debug/net9.0/EshopApi.Core.AssemblyInfo.cs
+/Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/Debug/net9.0/EshopApi.Core.csproj.CoreCompileInputs.cache
+/Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/Debug/net9.0/EshopApi.Core.dll
+/Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/Debug/net9.0/refint/EshopApi.Core.dll
+/Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/Debug/net9.0/EshopApi.Core.pdb
+/Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/Debug/net9.0/ref/EshopApi.Core.dll
