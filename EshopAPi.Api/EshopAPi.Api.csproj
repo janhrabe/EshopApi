@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
@@ -9,7 +9,12 @@
     <ItemGroup>
         <PackageReference Include="FastEndpoints" Version="5.35.0" />
         <PackageReference Include="FastEndpoints.Swagger" Version="5.35.0" />
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-preview.6.24328.4"/>
+        <PackageReference Include="MediatR" Version="11.1.0" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.14" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.3" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.3" />
+        <PackageReference Include="System.Text.Json" Version="9.0.3" />
+      
     </ItemGroup>
 
     <ItemGroup>
@@ -19,7 +24,22 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="ProductEndpoints\" />
+      <Content Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Remove="Properties\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Properties\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Properties\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Properties\**" />
     </ItemGroup>
 
 </Project>

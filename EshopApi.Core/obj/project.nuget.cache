@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "i/KUF84Jv9U=",
+  "dgSpecHash": "tfntkjSaYvE=",
   "success": true,
   "projectFilePath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/janhrabe/.nuget/packages/microsoft.netcore.app.ref/8.0.5/microsoft.netcore.app.ref.8.0.5.nupkg.sha512",
+    "/Users/janhrabe/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.5/microsoft.aspnetcore.app.ref.8.0.5.nupkg.sha512"
+  ],
   "logs": []
 }

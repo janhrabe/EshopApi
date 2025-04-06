@@ -1,0 +1,15 @@
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/bin/Debug/net8.0/EshopApi.UseCases.deps.json
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/bin/Debug/net8.0/EshopApi.UseCases.dll
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/bin/Debug/net8.0/EshopApi.UseCases.pdb
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/bin/Debug/net8.0/EshopApi.Core.dll
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/bin/Debug/net8.0/EshopApi.Core.pdb
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/EshopApi.UseCases.csproj.AssemblyReference.cache
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/EshopApi.UseCases.GeneratedMSBuildEditorConfig.editorconfig
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/EshopApi.UseCases.AssemblyInfoInputs.cache
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/EshopApi.UseCases.AssemblyInfo.cs
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/EshopApi.UseCases.csproj.CoreCompileInputs.cache
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/EshopApi.EBB7EE49.Up2Date
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/EshopApi.UseCases.dll
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/refint/EshopApi.UseCases.dll
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/EshopApi.UseCases.pdb
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/ref/EshopApi.UseCases.dll

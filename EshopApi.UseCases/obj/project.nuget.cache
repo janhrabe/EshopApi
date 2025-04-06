@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "cjYuyfyMlBw=",
+  "dgSpecHash": "i2cf3fJdx+Y=",
   "success": true,
   "projectFilePath": "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj",
   "expectedPackageFiles": [
-    "/Users/janhrabe/.nuget/packages/mediatr/12.5.0/mediatr.12.5.0.nupkg.sha512",
+    "/Users/janhrabe/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",
     "/Users/janhrabe/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
-    "/Users/janhrabe/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+    "/Users/janhrabe/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "/Users/janhrabe/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/janhrabe/.nuget/packages/microsoft.netcore.app.ref/8.0.5/microsoft.netcore.app.ref.8.0.5.nupkg.sha512",
+    "/Users/janhrabe/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.5/microsoft.aspnetcore.app.ref.8.0.5.nupkg.sha512"
   ],
   "logs": []
 }

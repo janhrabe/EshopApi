@@ -109,3 +109,8 @@
 /Users/janhrabe/Repos/EshopApi/EshopAPi.Api/obj/Debug/net9.0/EshopAPi.Api.pdb
 /Users/janhrabe/Repos/EshopApi/EshopAPi.Api/obj/Debug/net9.0/EshopAPi.Api.genruntimeconfig.cache
 /Users/janhrabe/Repos/EshopApi/EshopAPi.Api/obj/Debug/net9.0/ref/EshopAPi.Api.dll
+/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/bin/Debug/net9.0/Microsoft.Extensions.Configuration.dll
+/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/bin/Debug/net9.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Json.dll
+/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll

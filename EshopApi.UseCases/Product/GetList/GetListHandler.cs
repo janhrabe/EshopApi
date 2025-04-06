@@ -17,7 +17,7 @@ public class GetListHandler(IRepository<ProductEntity> repository) : IRequestHan
 
         var products = allProducts;
 
-        if (request.PageNumber is not null)
+        if (request.PageNumber.HasValue)
         {
             var skip = (request.PageNumber.Value - 1) * PageSize;
             products = allProducts.Skip(skip).Take(PageSize);
