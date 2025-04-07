@@ -13,3 +13,4 @@
 /Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/refint/EshopApi.UseCases.dll
 /Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/EshopApi.UseCases.pdb
 /Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/ref/EshopApi.UseCases.dll
+/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/Debug/net8.0/EshopApi.UseCases.sourcelink.json

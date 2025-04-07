@@ -197,3 +197,4 @@
 /Users/janhrabe/Repos/EshopApi/EshopApi.Tests/obj/Debug/net8.0/EshopApi.Tests.pdb
 /Users/janhrabe/Repos/EshopApi/EshopApi.Tests/obj/Debug/net8.0/EshopApi.Tests.genruntimeconfig.cache
 /Users/janhrabe/Repos/EshopApi/EshopApi.Tests/obj/Debug/net8.0/ref/EshopApi.Tests.dll
+/Users/janhrabe/Repos/EshopApi/EshopApi.Tests/obj/Debug/net8.0/EshopApi.Tests.sourcelink.json

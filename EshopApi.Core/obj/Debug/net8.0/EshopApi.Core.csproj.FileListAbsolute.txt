@@ -9,3 +9,4 @@
 /Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/Debug/net8.0/refint/EshopApi.Core.dll
 /Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/Debug/net8.0/EshopApi.Core.pdb
 /Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/Debug/net8.0/ref/EshopApi.Core.dll
+/Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/Debug/net8.0/EshopApi.Core.sourcelink.json

@@ -15,3 +15,4 @@
 /Users/janhrabe/Repos/EshopApi/EshopApi.Infrastructure/obj/Debug/net8.0/EshopApi.Infrastructure.pdb
 /Users/janhrabe/Repos/EshopApi/EshopApi.Infrastructure/obj/Debug/net8.0/EshopApi.Infrastructure.genruntimeconfig.cache
 /Users/janhrabe/Repos/EshopApi/EshopApi.Infrastructure/obj/Debug/net8.0/ref/EshopApi.Infrastructure.dll
+/Users/janhrabe/Repos/EshopApi/EshopApi.Infrastructure/obj/Debug/net8.0/EshopApi.Infrastructure.sourcelink.json

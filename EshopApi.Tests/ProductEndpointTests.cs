@@ -46,7 +46,7 @@ public class ProductEndpointsTests
             .ReturnsAsync(Result<List<ListProductDto>>.Success(_seededProducts.Select(p =>
                 new ListProductDto(p.Name, p.ImageUrl, p.Price, p.QuantityInStock)).ToList()));
 
-        var endpoint = new ListProducts(_mediatorMock.Object);
+        var endpoint = new ListProductsEndpoint(_mediatorMock.Object);
         var request = new ListProductsRequest { PageNumber = null };
 
         await endpoint.HandleAsync(request, CancellationToken.None);
@@ -64,7 +64,7 @@ public class ProductEndpointsTests
         _mediatorMock.Setup(m => m.Send(It.Is<GetListCommand>(c => c.PageNumber == 2), It.IsAny<CancellationToken>()))
             .ReturnsAsync(Result<List<ListProductDto>>.Success(paged));
 
-        var endpoint = new ListProducts(_mediatorMock.Object);
+        var endpoint = new ListProductsEndpoint(_mediatorMock.Object);
         var request = new ListProductsRequest { PageNumber = 2 };
 
         await endpoint.HandleAsync(request, CancellationToken.None);
@@ -91,7 +91,7 @@ public class ProductEndpointsTests
                 new ListProductDto(product.Name, product.ImageUrl, product.Price, product.QuantityInStock)
             ]));
 
-        var endpoint = new ListProducts(_mediatorMock.Object);
+        var endpoint = new ListProductsEndpoint(_mediatorMock.Object);
         var request = new ListProductsRequest();
 
         await endpoint.HandleAsync(request, CancellationToken.None);
@@ -109,7 +109,7 @@ public class ProductEndpointsTests
         _mediatorMock.Setup(m => m.Send(It.IsAny<GetListCommand>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(Result<List<ListProductDto>>.Success(new List<ListProductDto>()));
 
-        var endpoint = new ListProducts(_mediatorMock.Object);
+        var endpoint = new ListProductsEndpoint(_mediatorMock.Object);
         var request = new ListProductsRequest();
 
         await endpoint.HandleAsync(request, CancellationToken.None);

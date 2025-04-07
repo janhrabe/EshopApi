@@ -2187,7 +2187,9 @@
           "EshopApi.Core": "1.0.0",
           "MediatR": "12.5.0",
           "Microsoft.EntityFrameworkCore": "9.0.3",
-          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.3"
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.3",
+          "Microsoft.Extensions.Configuration": "9.0.3",
+          "Microsoft.Extensions.Configuration.Json": "9.0.3"
         },
         "compile": {
           "bin/placeholder/EshopApi.Infrastructure.dll": {}

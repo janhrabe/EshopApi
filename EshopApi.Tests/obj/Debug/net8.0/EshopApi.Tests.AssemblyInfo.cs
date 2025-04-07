@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EshopApi.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07f4c61dc02acf3b2e4fadf6452b94c7e3d8dd0c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b4abec21a4c9c911b16104f3f7b147df4437223")]
 [assembly: System.Reflection.AssemblyProductAttribute("EshopApi.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EshopApi.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

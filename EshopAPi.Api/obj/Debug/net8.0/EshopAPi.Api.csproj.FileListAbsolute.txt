@@ -202,3 +202,4 @@
 /Users/janhrabe/Repos/EshopApi/EshopAPi.Api/obj/Debug/net8.0/EshopAPi.Api.pdb
 /Users/janhrabe/Repos/EshopApi/EshopAPi.Api/obj/Debug/net8.0/EshopAPi.Api.genruntimeconfig.cache
 /Users/janhrabe/Repos/EshopApi/EshopAPi.Api/obj/Debug/net8.0/ref/EshopAPi.Api.dll
+/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/obj/Debug/net8.0/EshopAPi.Api.sourcelink.json

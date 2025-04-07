@@ -5,7 +5,7 @@ using MediatR;
 
 namespace EshopAPi.Api.ProductEndpoints.ListEndpoint;
 
-public class ListProducts(IMediator mediator) : Endpoint<ListProductsRequest, ListProductsResponse>
+public class ListProductsEndpoint(IMediator mediator) : Endpoint<ListProductsRequest, ListProductsResponse>
 {
     public override void Configure()
     {
