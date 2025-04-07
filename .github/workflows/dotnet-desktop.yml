@@ -55,10 +55,10 @@ jobs:
     runs-on: windows-latest
 
     env:
-      Solution_Name: ./EshopApi.sln  # Opravená cesta k souboru .sln
-      Test_Project_Path: your-test-project-path
-      Wap_Project_Directory: your-wap-project-directory-name
-      Wap_Project_Path: your-wap-project-path
+      Solution_Name: ./EshopApi.sln  # Cesta k .sln souboru
+      Test_Project_Path: ./tests/EshopApi.Tests/EshopApi.Tests.csproj  # Cesta k testovacímu projektu
+      Wap_Project_Directory: ./src/EshopApi.Package  # Cesta k adresáři pro balíček
+      Wap_Project_Path: ./src/EshopApi.Package/EshopApi.Package.wapproj  # Cesta k souboru .wapproj
 
     steps:
     - name: Checkout
@@ -78,7 +78,7 @@ jobs:
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test
+      run: dotnet test ${{ env.Test_Project_Path }}
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
@@ -90,12 +90,16 @@ jobs:
     - name: Decode the pfx
       run: |
         $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.Base64_Encoded_Pfx }}")
-        $certificatePath = Join-Path -Path $env:Wap_Project_Directory -ChildPath GitHubActionsWorkflow.pfx
+        $certificateDir = Join-Path -Path $env:Wap_Project_Directory -ChildPath "Certificate"
+        if (-not (Test-Path $certificateDir)) {
+          New-Item -Path $certificateDir -ItemType Directory
+        }
+        $certificatePath = Join-Path -Path $certificateDir -ChildPath "GitHubActionsWorkflow.pfx"
         [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
 
     # Create the app package by building and packaging the Windows Application Packaging project
     - name: Create the app package
-      run: msbuild $env:Wap_Project_Path /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:AppxBundle=$env:Appx_Bundle /p:PackageCertificateKeyFile=GitHubActionsWorkflow.pfx /p:PackageCertificatePassword=${{ secrets.Pfx_Key }}
+      run: msbuild $env:Wap_Project_Path /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:AppxBundle=$env:Appx_Bundle /p:PackageCertificateKeyFile=Certificate\GitHubActionsWorkflow.pfx /p:PackageCertificatePassword=${{ secrets.Pfx_Key }}
       env:
         Appx_Bundle: Always
         Appx_Bundle_Platforms: x86|x64
@@ -104,7 +108,7 @@ jobs:
 
     # Remove the pfx
     - name: Remove the pfx
-      run: Remove-Item -path $env:Wap_Project_Directory\GitHubActionsWorkflow.pfx
+      run: Remove-Item -path $env:Wap_Project_Directory\Certificate\GitHubActionsWorkflow.pfx
 
     # Upload the MSIX package
     - name: Upload build artifacts
@@ -112,4 +116,3 @@ jobs:
       with:
         name: MSIX Package
         path: ${{ env.Wap_Project_Directory }}\AppPackages
-
