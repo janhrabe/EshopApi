@@ -56,9 +56,9 @@ jobs:
 
     env:
       Solution_Name: ./EshopApi.sln  # Cesta k .sln souboru
-      Test_Project_Path: ./tests/EshopApi.Tests/EshopApi.Tests.csproj  # Cesta k testovacímu projektu
-      Wap_Project_Directory: ./src/EshopApi.Package  # Cesta k adresáři pro balíček
-      Wap_Project_Path: ./src/EshopApi.Package/EshopApi.Package.wapproj  # Cesta k souboru .wapproj
+      Test_Project_Path: ./EshopApi.Tests/EshopApi.Tests.csproj  # Cesta k testovacímu projektu
+      Wap_Project_Directory: ./EshopApi.Package  # Cesta k adresáři pro balíček
+      Wap_Project_Path: ./EshopApi.Package/EshopApi.Package.wapproj  # Cesta k souboru .wapproj
 
     steps:
     - name: Checkout
