@@ -55,7 +55,7 @@ jobs:
 
     env:
       Solution_Name: EshopApi.sln
-      Test_Project_Path: tests/EshopApi.Tests/EshopApi.Tests.csproj
+      Test_Project_Path: EshopApi.Tests/EshopApi.Tests.csproj
 
     steps:
       - name: Checkout code
