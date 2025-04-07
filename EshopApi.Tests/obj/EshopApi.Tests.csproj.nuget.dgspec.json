@@ -4,14 +4,145 @@
     "/Users/janhrabe/Repos/EshopApi/EshopApi.Tests/EshopApi.Tests.csproj": {}
   },
   "projects": {
-    "/Users/janhrabe/Repos/EshopApi/EshopApi.Tests/EshopApi.Tests.csproj": {
+    "/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/EshopAPi.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/janhrabe/Repos/EshopApi/EshopApi.Tests/EshopApi.Tests.csproj",
-        "projectName": "EshopApi.Tests",
-        "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Tests/EshopApi.Tests.csproj",
+        "projectUniqueName": "/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/EshopAPi.Api.csproj",
+        "projectName": "EshopAPi.Api",
+        "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/EshopAPi.Api.csproj",
         "packagesPath": "/Users/janhrabe/.nuget/packages/",
-        "outputPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Tests/obj/",
+        "outputPath": "/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/janhrabe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj": {
+                "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj"
+              },
+              "/Users/janhrabe/Repos/EshopApi/EshopApi.Infrastructure/EshopApi.Infrastructure.csproj": {
+                "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Infrastructure/EshopApi.Infrastructure.csproj"
+              },
+              "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj": {
+                "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FastEndpoints": {
+              "target": "Package",
+              "version": "[5.35.0, )"
+            },
+            "FastEndpoints.Swagger": {
+              "target": "Package",
+              "version": "[5.35.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.5, 8.0.5]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[8.0.5, 8.0.5]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.5, 8.0.5]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100-preview.6.24328.19/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj",
+        "projectName": "EshopApi.Core",
+        "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj",
+        "packagesPath": "/Users/janhrabe/.nuget/packages/",
+        "outputPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/janhrabe/.nuget/NuGet/NuGet.Config"
@@ -44,10 +175,209 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.5, 8.0.5]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.5, 8.0.5]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100-preview.6.24328.19/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/janhrabe/Repos/EshopApi/EshopApi.Infrastructure/EshopApi.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/janhrabe/Repos/EshopApi/EshopApi.Infrastructure/EshopApi.Infrastructure.csproj",
+        "projectName": "EshopApi.Infrastructure",
+        "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Infrastructure/EshopApi.Infrastructure.csproj",
+        "packagesPath": "/Users/janhrabe/.nuget/packages/",
+        "outputPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/janhrabe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj": {
+                "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.5, 8.0.5]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.5, 8.0.5]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100-preview.6.24328.19/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/janhrabe/Repos/EshopApi/EshopApi.Tests/EshopApi.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/janhrabe/Repos/EshopApi/EshopApi.Tests/EshopApi.Tests.csproj",
+        "projectName": "EshopApi.Tests",
+        "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Tests/EshopApi.Tests.csproj",
+        "packagesPath": "/Users/janhrabe/.nuget/packages/",
+        "outputPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/janhrabe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/EshopAPi.Api.csproj": {
+                "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/EshopAPi.Api.csproj"
+              },
+              "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj": {
+                "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj"
+              },
+              "/Users/janhrabe/Repos/EshopApi/EshopApi.Infrastructure/EshopApi.Infrastructure.csproj": {
+                "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Infrastructure/EshopApi.Infrastructure.csproj"
+              },
+              "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj": {
+                "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FastEndpoints": {
+              "target": "Package",
+              "version": "[5.35.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.9.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "System.Threading": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             },
             "coverlet.collector": {
               "target": "Package",
@@ -60,6 +390,94 @@
             "xunit.runner.visualstudio": {
               "target": "Package",
               "version": "[2.5.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.5, 8.0.5]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.5, 8.0.5]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100-preview.6.24328.19/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj",
+        "projectName": "EshopApi.UseCases",
+        "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/EshopApi.UseCases.csproj",
+        "packagesPath": "/Users/janhrabe/.nuget/packages/",
+        "outputPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.UseCases/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/janhrabe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj": {
+                "projectPath": "/Users/janhrabe/Repos/EshopApi/EshopApi.Core/EshopApi.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
+            "MediatR.Contracts": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.3, )"
             }
           },
           "imports": [

@@ -5,7 +5,7 @@ using MediatR;
 
 namespace EshopAPi.Api.ProductEndpoints.GetByIdEndpoint;
 
-public class GetProductByIdEndpoint(Mediator mediator) : Endpoint<GetProductByIdRequest, ProductDto>
+public class GetProductByIdEndpoint(IMediator mediator) : Endpoint<GetProductByIdRequest, ProductDto>
 {
     public override void Configure()
     {
@@ -21,7 +21,7 @@ public class GetProductByIdEndpoint(Mediator mediator) : Endpoint<GetProductById
 
         if (!result.IsSuccess || result.Value == null)
         {
-            await SendNotFoundAsync(cancellationToken);
+            await SendAsync(null!, 400, cancellationToken);
             return;
         }
 

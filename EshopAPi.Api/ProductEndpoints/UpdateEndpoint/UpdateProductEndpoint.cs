@@ -16,6 +16,7 @@ public class UpdateProductEndpoint(IMediator mediator) : Endpoint<UpdateProductR
 
     public override async Task HandleAsync(UpdateProductRequest request, CancellationToken cancellationToken)
     {
+        
         var result = await mediator.Send(
             new UpdateProductCommand(
                 request.Id,

@@ -1,18 +1,24 @@
-using System.Reflection;
+using EshopApi.Core.Entities;
 using EshopApi.Core.Interfaces;
+using EshopApi.Infrastructure.Data;
 using EshopApi.Infrastructure.Repositories;
-using EshopApi.UseCases.Product.Create;
 using EshopApi.UseCases.Product.GetList;
+using EshopApi.UseCases.Product.Update;
 using FastEndpoints;
 using FastEndpoints.Swagger;
-using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IRepository<Product>, ProductRepository>();
 
-builder.Services.AddMediatR(typeof(GetListCommand).Assembly);
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssemblyContaining<UpdateProductHandler>());
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetListCommand).Assembly));
 
 builder.Services.AddFastEndpoints();
 builder.Services.AddEndpointsApiExplorer();
@@ -26,11 +32,13 @@ builder.Services.SwaggerDocument(o =>
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+
     app.UseSwaggerUi();
 }
 
