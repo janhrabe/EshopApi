@@ -43,7 +43,7 @@ public class UpdateProductEndpoint(IMediator mediator) : Endpoint<UpdateProductR
              var dto = commandResult.Value;
              Response = new UpdateProductResponse(
                  new UpdateProductDTO(
-                     dto.QuantityInStock
+                     dto!.QuantityInStock
                  )
              );
         }

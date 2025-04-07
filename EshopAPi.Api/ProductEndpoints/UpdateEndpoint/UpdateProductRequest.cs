@@ -1,4 +1,3 @@
-using FastEndpoints;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EshopAPi.Api.ProductEndpoints.UpdateEndpoint;
