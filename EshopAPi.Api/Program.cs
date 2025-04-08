@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("EshopApiConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("EshopApiConnection")));
 
 builder.Services.AddScoped<IRepository<Product>, ProductRepository>();
 

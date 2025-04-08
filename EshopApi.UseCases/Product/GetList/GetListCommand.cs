@@ -4,7 +4,7 @@ using MediatR;
 
 namespace EshopApi.UseCases.Product.GetList;
 
-public record GetListCommand(int? PageNumber) : IRequest<Result<List<ListProductDto>>>
+public record GetListCommand() : IRequest<Result<List<ListProductDto>>>
 {
  
 }

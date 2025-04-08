@@ -21,7 +21,7 @@ public class AppDbFactory : IDesignTimeDbContextFactory<AppDbContext>, IDbContex
             
         var connectionString = configuration.GetConnectionString("EshopApiConnection");
         var optionBuilder = new DbContextOptionsBuilder<AppDbContext>();
-        optionBuilder.UseSqlServer(connectionString);
+        optionBuilder.UseNpgsql(connectionString);
         
         return new AppDbContext(optionBuilder.Options);
     }
