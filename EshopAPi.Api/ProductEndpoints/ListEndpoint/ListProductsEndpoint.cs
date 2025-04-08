@@ -5,17 +5,17 @@ using MediatR;
 
 namespace EshopAPi.Api.ProductEndpoints.ListEndpoint;
 
-public class ListProductsEndpoint(IMediator mediator) : EndpointWithoutRequest<ListProductsResponse>
+public class ListProductsEndpoint(IMediator mediator) : Endpoint<ListProductsRequest, ListProductsResponse>
 {
     public override void Configure()
     {
-        Get("/products/v1/list");
+        Get("/products/list");
         AllowAnonymous();
     }
 
-    public override async Task HandleAsync(CancellationToken cancellationToken)
+    public override async Task HandleAsync(ListProductsRequest request, CancellationToken cancellationToken)
     {
-        var result = await mediator.Send(new GetListCommand(), cancellationToken);
+        var result = await mediator.Send(new GetListCommand(request.PageNumber), cancellationToken);
 
             if (result.IsSuccess)
             {
@@ -23,7 +23,6 @@ public class ListProductsEndpoint(IMediator mediator) : EndpointWithoutRequest<L
                 {
                     Products = result.Value!
                         .Select(p => new ListProductDto(p.Name, p.ImageUrl, p.Price, p.QuantityInStock))
-                        .OrderBy(p => p.Name)
                         .ToList()
                 };
             }
@@ -31,5 +30,6 @@ public class ListProductsEndpoint(IMediator mediator) : EndpointWithoutRequest<L
             {
                 Response = new ListProductsResponse { Products = new List<ListProductDto>() };
             }
+        
     }
 }
