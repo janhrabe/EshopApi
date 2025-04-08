@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7wXBFiQ5TkA=",
+  "dgSpecHash": "i1esLJYwdDE=",
   "success": true,
   "projectFilePath": "/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/EshopAPi.Api.csproj",
   "expectedPackageFiles": [
@@ -71,6 +71,8 @@
     "/Users/janhrabe/.nuget/packages/njsonschema.annotations/11.1.0/njsonschema.annotations.11.1.0.nupkg.sha512",
     "/Users/janhrabe/.nuget/packages/njsonschema.newtonsoftjson/11.1.0/njsonschema.newtonsoftjson.11.1.0.nupkg.sha512",
     "/Users/janhrabe/.nuget/packages/njsonschema.yaml/11.1.0/njsonschema.yaml.11.1.0.nupkg.sha512",
+    "/Users/janhrabe/.nuget/packages/npgsql/9.0.2/npgsql.9.0.2.nupkg.sha512",
+    "/Users/janhrabe/.nuget/packages/npgsql.entityframeworkcore.postgresql/9.0.3/npgsql.entityframeworkcore.postgresql.9.0.3.nupkg.sha512",
     "/Users/janhrabe/.nuget/packages/nswag.annotations/14.2.0/nswag.annotations.14.2.0.nupkg.sha512",
     "/Users/janhrabe/.nuget/packages/nswag.aspnetcore/14.2.0/nswag.aspnetcore.14.2.0.nupkg.sha512",
     "/Users/janhrabe/.nuget/packages/nswag.core/14.2.0/nswag.core.14.2.0.nupkg.sha512",

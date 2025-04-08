@@ -9,7 +9,7 @@ public class ListProductsEndpoint(IMediator mediator) : Endpoint<ListProductsReq
 {
     public override void Configure()
     {
-        Get("/products");
+        Get("/products/list");
         AllowAnonymous();
     }
 

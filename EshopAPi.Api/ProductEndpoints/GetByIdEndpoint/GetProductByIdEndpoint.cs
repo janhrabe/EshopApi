@@ -9,7 +9,7 @@ public class GetProductByIdEndpoint(IMediator mediator) : Endpoint<GetProductByI
 {
     public override void Configure()
     {
-        Get("/products/{productId}");
+        Get("/products/detail/{productId}");
         AllowAnonymous();
     }
 

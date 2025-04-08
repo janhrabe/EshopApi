@@ -10,7 +10,7 @@ public class UpdateProductEndpoint(IMediator mediator) : Endpoint<UpdateProductR
 {
     public override void Configure()
     {
-        Put("/product/{productId}");
+        Put("/products/update/{productId}");
         AllowAnonymous();
     }
 

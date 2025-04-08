@@ -203,3 +203,5 @@
 /Users/janhrabe/Repos/EshopApi/EshopAPi.Api/obj/Debug/net8.0/EshopAPi.Api.genruntimeconfig.cache
 /Users/janhrabe/Repos/EshopApi/EshopAPi.Api/obj/Debug/net8.0/ref/EshopAPi.Api.dll
 /Users/janhrabe/Repos/EshopApi/EshopAPi.Api/obj/Debug/net8.0/EshopAPi.Api.sourcelink.json
+/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/bin/Debug/net8.0/Npgsql.dll
+/Users/janhrabe/Repos/EshopApi/EshopAPi.Api/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
