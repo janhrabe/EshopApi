@@ -10,6 +10,7 @@ public class GetProductByIdEndpoint(IMediator mediator) : Endpoint<GetProductByI
     public override void Configure()
     {
         Get("/products/detail/{productId}");
+        Version(0);
         AllowAnonymous();
     }
 

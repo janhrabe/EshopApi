@@ -7,10 +7,11 @@ using MediatR;
 using EshopAPi.Api.ProductEndpoints.CreateEndpoint;
 using EshopAPi.Api.ProductEndpoints.GetByIdEndpoint;
 using EshopAPi.Api.ProductEndpoints.ListEndpoint;
+using EshopAPi.Api.ProductEndpoints.PagedListEndpoint;
 using EshopAPi.Api.ProductEndpoints.UpdateEndpoint;
 using EshopApi.Core;
 using EshopApi.Core.Entities;
-using EshopApi.Core.Interfaces;
+using EshopApi.UseCases.Product.GetPagedList;
 using EshopApi.UseCases.Product.Update;
 
 namespace EshopApi.Tests;
@@ -40,39 +41,21 @@ public class ProductEndpointsTests
     }
 
     [Fact]
-    public async Task GetList_ReturnsAllProducts_WhenPageNumberIsNull()
+    public async Task GetList_ReturnsAllProducts()
     {
-        _mediatorMock.Setup(m => m.Send(It.Is<GetListCommand>(c => c.PageNumber == null), It.IsAny<CancellationToken>()))
+        _mediatorMock.Setup(m => m.Send(It.IsAny<GetListCommand>(),It.IsAny<CancellationToken>()))
             .ReturnsAsync(Result<List<ListProductDto>>.Success(_seededProducts.Select(p =>
                 new ListProductDto(p.Name, p.ImageUrl, p.Price, p.QuantityInStock)).ToList()));
 
         var endpoint = new ListProductsEndpoint(_mediatorMock.Object);
-        var request = new ListProductsRequest { PageNumber = null };
+      
 
-        await endpoint.HandleAsync(request, CancellationToken.None);
+        await endpoint.HandleAsync(CancellationToken.None);
 
         Assert.NotNull(endpoint.Response);
         Assert.Equal(20, endpoint.Response.Products.Count());
     }
-
-    [Fact]
-    public async Task GetList_ReturnsPagedProducts_WhenPageNumberIsProvided()
-    {
-        var paged = _seededProducts.Skip(10).Take(10).Select(p =>
-            new ListProductDto(p.Name, p.ImageUrl, p.Price, p.QuantityInStock)).ToList();
-
-        _mediatorMock.Setup(m => m.Send(It.Is<GetListCommand>(c => c.PageNumber == 2), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(Result<List<ListProductDto>>.Success(paged));
-
-        var endpoint = new ListProductsEndpoint(_mediatorMock.Object);
-        var request = new ListProductsRequest { PageNumber = 2 };
-
-        await endpoint.HandleAsync(request, CancellationToken.None);
-
-        Assert.NotNull(endpoint.Response);
-        Assert.Equal(10, endpoint.Response.Products.Count());
-        Assert.Equal("Product 11", endpoint.Response.Products.First().Name);
-    }
+    
 
     [Fact]
     public async Task GetList_MapsCorrectlyToDto()
@@ -92,9 +75,9 @@ public class ProductEndpointsTests
             ]));
 
         var endpoint = new ListProductsEndpoint(_mediatorMock.Object);
-        var request = new ListProductsRequest();
+     
 
-        await endpoint.HandleAsync(request, CancellationToken.None);
+        await endpoint.HandleAsync(CancellationToken.None);
 
         var dto = endpoint.Response.Products.First();
         Assert.True(dto.Name == "Test");
@@ -110,9 +93,9 @@ public class ProductEndpointsTests
             .ReturnsAsync(Result<List<ListProductDto>>.Success(new List<ListProductDto>()));
 
         var endpoint = new ListProductsEndpoint(_mediatorMock.Object);
-        var request = new ListProductsRequest();
+     
 
-        await endpoint.HandleAsync(request, CancellationToken.None);
+        await endpoint.HandleAsync(CancellationToken.None);
 
         Assert.NotNull(endpoint.Response);
         Assert.Empty(endpoint.Response.Products);
@@ -198,4 +181,47 @@ public class ProductEndpointsTests
         Assert.NotNull(endpoint.Response);
         Assert.Equal(request.QuantityInStock, endpoint.Response.Product.QuantityInStock);
     }
+    
+    [Fact]
+    public async Task PagedList_ReturnsEmptyList_WhenNoProducts()
+    {
+       
+        var command = new GetPagedListCommand(1);
+        _mediatorMock.Setup(m => m.Send(command, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(Result<List<ListProductDto>>.Success(new List<ListProductDto>()));
+
+        var endpoint = new PagedListProductsEndpoint(_mediatorMock.Object);
+        var request = new PagedListProductsRequest { PageNumber = 1 };
+
+ 
+        await endpoint.HandleAsync(request, CancellationToken.None);
+
+        
+        Assert.NotNull(endpoint.Response); 
+        Assert.Empty(endpoint.Response.Products);
+    }
+    
+    [Fact]
+    public async Task PagedList_ReturnsProducts_WhenSuccess()
+    {
+        var paged = _seededProducts.Skip(10).Take(10).Select(p =>
+            new ListProductDto(p.Name, p.ImageUrl, p.Price, p.QuantityInStock)).ToList();
+        
+        ///var command = new GetPagedListCommand(2);
+        
+        _mediatorMock.Setup(m => m.Send(It.Is<GetPagedListCommand>(c => c.PageNumber == 1), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(Result<List<ListProductDto>>.Success(paged));
+
+        var endpoint = new PagedListProductsEndpoint(_mediatorMock.Object);
+        var request = new PagedListProductsRequest { PageNumber = 1 };
+
+        
+        await endpoint.HandleAsync(request, CancellationToken.None);
+
+      
+        Assert.NotNull(endpoint.Response);
+        Assert.Equal(10, endpoint.Response.Products.Count()); 
+        Assert.Equal("Product 11", endpoint.Response.Products.First().Name);
+    }
+
 }

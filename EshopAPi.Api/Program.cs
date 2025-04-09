@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("EshopApiConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("EshopApiConnection")));
 
 builder.Services.AddScoped<IRepository<Product>, ProductRepository>();
 
@@ -21,11 +21,28 @@ builder.Services.AddMediatR(cfg =>
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetListCommand).Assembly));
 
 builder.Services.AddFastEndpoints();
+
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.SwaggerDocument(o =>
 {
-    o.ShortSchemaNames = true;
+    o.MaxEndpointVersion = 2;
+    o.DocumentSettings = s =>
+    {
+        s.DocumentName = "v1";
+        s.Title = "Eshop API";
+        s.Version = "v0";
+    };
+});
+
+builder.Services.SwaggerDocument(o =>
+{
+    o.DocumentSettings = s =>
+    {
+        s.DocumentName = "v2";
+        s.Title = "Eshop API";
+        s.Version = "v1";
+    };
 });
 
 // Add services to the container.

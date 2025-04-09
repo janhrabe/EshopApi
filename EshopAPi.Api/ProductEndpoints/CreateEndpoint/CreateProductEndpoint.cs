@@ -10,6 +10,7 @@ public class CreateProductEndpoint(IMediator mediator) : Endpoint<CreateProductR
     public override void Configure()
     {
         Post("/products/create");
+        Version(0);
         AllowAnonymous();
         Summary(s =>
         {
