@@ -31,7 +31,9 @@ Before running the project, make sure you have the following installed:
 The API documentation is available via Swagger UI at the following URL once the application is running: https://localhost:7005/swagger. (Use yout localhost port instead)
 Refer to the Swagger UI for detailed information about the available endpoints and their request/response models.
 
-### Available Endpoints
+### Available Endpoints 
+
+# V1
 
 - **POST `/products/create`**  
   Creates a new product with the provided name, description, price, quantity, and image URL.
@@ -43,4 +45,10 @@ Refer to the Swagger UI for detailed information about the available endpoints a
   Retrieves detailed information about a specific product by its `productId`.
 
 - **GET `/products/list`**  
-  Returns a list of all products. Supports optional pagination parameters like `pageNumber`.
+  Returns a list of all products
+
+  # V2
+  - **Updated GET `/products/list`**
+  Returns paged list, with const 10 items on the page. 
+
+  - **And rest endpoint above, with no change**
